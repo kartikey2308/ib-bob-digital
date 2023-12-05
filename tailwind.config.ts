@@ -1,14 +1,36 @@
-/** @type {import('tailwindcss').Config} */
+//@type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss';
 
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
     './node_modules/@idb-dab/ui-core/dist/**/*.js',
   ],
+  important:true,
   theme: {
+    ...defaultTheme,
+  colors:{
+    ...defaultTheme.colors,
+    primary:"#3881F6",
+    white:"#ffffff",
+    orange:"#FF5C34",
+    black:"#000000",
+    text:{
+      DEFAULT:"#1f2937",
+      light:"6C7281"
+    },
+    light:{
+      DEFAULT:"FAFBFC",
+      lighter:"F3F4F6"
+    }
+  },
     extend: {
       fontFamily: {
-        primary: ['Inter'],
+        'sans': "['ui-sans-serif', 'system-ui', 'Airbnb Cereal App',...]",
+        'serif': "['ui-serif', 'Georgia', ...]",
+        
+        primary: "#3881F6",
       },
       fontSize: {
         xxs: '0.625rem',
@@ -17,14 +39,7 @@ module.exports = {
         modal: '0px 7px 40px rgba(242, 101, 32, 0.35)',
       },
       colors: {
-        primary: {
-          100: '#FFF8F7',
-          200: '#FFF3F1',
-          300: '#FCECE5',
-          400: '#FFEDE6',
-          500: '#FCDCD58F',
-          900: '#FF5C34',
-        },
+        primary: "#3881F6",
         secondary: {
           100: '#1F3C664D',
           200: '#F3F9FD',
