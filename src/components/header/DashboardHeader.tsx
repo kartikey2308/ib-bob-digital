@@ -16,7 +16,7 @@ export default function DashboardHeader() {
         </div>
 
         {/* Middle Section: Search Button */}
-        <div className=" flex items-center text-center w-1/3 mr-80">
+        <div className=" flex items-center text-center w-1/3 mr-80 border-2 border-{#EDEDED} rounded-lg p-1 mb-1">
           {/* Search Icon */}
           <div className="mr-1">
             <Image
@@ -33,7 +33,7 @@ export default function DashboardHeader() {
             className="p-2 w-4/5 h-8 bg-white-700 text-black rounded-md border-none focus:border-none"
           />
           {/* Mic Icon */}
-          <div className="ml-1">
+          <div className="ml-14">
             <Image src="/mic-icon.svg" alt="Mic Icon" width={18} height={18} />
           </div>
         </div>
