@@ -13,7 +13,8 @@
     "@idb-dab/ui-models": "^0.0.1",
     "@idb-dab/ui-utils": "^0.0.1",
     "@tailwindcss/typography": "^0.5.10",
-    "next": "14.0.3",
+    "classnames": "^2.3.2",
+    "next": "^14.0.3",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-scrollbar": "^3.0.5"

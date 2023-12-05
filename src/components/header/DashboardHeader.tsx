@@ -8,7 +8,7 @@ export default function DashboardHeader() {
         {/* Left Section: Icon */}
         <div className="flex items-center ml-12 mb-2">
           <Image
-            src="/header_bob_logo.svg"
+            src="/assets/images/header_bob_logo.svg"
             alt="BobLogo"
             width={147}
             height={73}
@@ -20,7 +20,7 @@ export default function DashboardHeader() {
           {/* Search Icon */}
           <div className="mr-1">
             <Image
-              src="/search-icon.svg"
+              src="/assets/images/search-icon.svg"
               alt="Search Icon"
               width={25}
               height={25}
@@ -34,7 +34,7 @@ export default function DashboardHeader() {
           />
           {/* Mic Icon */}
           <div className="ml-14">
-            <Image src="/mic-icon.svg" alt="Mic Icon" width={18} height={18} />
+            <Image src="/assets/images/mic-icon.svg" alt="Mic Icon" width={18} height={18} />
           </div>
         </div>
 
@@ -43,7 +43,7 @@ export default function DashboardHeader() {
           {/* Example of 4 button icons */}
           <button className="mx-2">
             <Image
-              src="/header-right-1.svg"
+              src="/assets/images/header-right-1.svg"
               alt="Icon 1"
               width={18}
               height={18}
@@ -51,7 +51,7 @@ export default function DashboardHeader() {
           </button>
           <button className="mx-2">
             <Image
-              src="/header-right-2.svg"
+              src="/assets/images/header-right-2.svg"
               alt="Icon 2"
               width={18}
               height={18}
@@ -59,7 +59,7 @@ export default function DashboardHeader() {
           </button>
           <button className="mx-2">
             <Image
-              src="/header-right-3.svg"
+              src="/assets/images/header-right-3.svg"
               alt="Icon 3"
               width={18}
               height={18}
@@ -67,7 +67,7 @@ export default function DashboardHeader() {
           </button>
           <button className="mx-2">
             <Image
-              src="/header-right-4.svg"
+              src="/assets/images/header-right-4.svg"
               alt="Icon 4"
               width={15}
               height={10}
@@ -75,14 +75,14 @@ export default function DashboardHeader() {
           </button>
           <button className="mx-2">
             <Image
-              src="/header-profile-icon.svg"
+              src="/assets/images/header-profile-icon.svg"
               alt="Icon 4"
               width={40}
               height={40}
             />
           </button>
           <button className="mx-2">
-            <Image src="/arrow-down.svg" alt="Icon 4" width={10} height={10} />
+            <Image src="/assets/images/arrow-down.svg" alt="Icon 4" width={10} height={10} />
           </button>
         </div>
       </header>
