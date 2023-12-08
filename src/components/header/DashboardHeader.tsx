@@ -16,7 +16,7 @@ export default function DashboardHeader() {
         </div>
 
         {/* Middle Section: Search Button */}
-        <div className=" flex items-center text-center w-1/3 mr-80 border-2 border-{#EDEDED} rounded-lg p-1 mb-1">
+        <div className=" flex items-center text-center w-1/3 mr-80 border-2 border-neutral-900 rounded-lg p-1 mb-1">
           {/* Search Icon */}
           <div className="mr-1">
             <Image
@@ -28,9 +28,9 @@ export default function DashboardHeader() {
           </div>
           <input
             id='searchInput'
-            type="text"
+            type="searchBox"
             placeholder="Search"
-            className="p-2 w-4/5 h-8 bg-white-700 text-black rounded-md border-none focus:border-none"
+            className="p-2 w-4/5 h-8 bg-white-700 text-black outline-none rounded-md border-none"
           />
           {/* Mic Icon */}
           <div className="ml-14">
@@ -86,7 +86,7 @@ export default function DashboardHeader() {
           </button>
         </div>
       </header>
-      <hr className="border-t-1 border-{#EDEDED} mb-5" />
+      <hr className={`border-t-1 border-neutral-900 mb-5`} />
     </div>
   );
 }

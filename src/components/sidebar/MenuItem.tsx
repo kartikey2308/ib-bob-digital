@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 import Link from "next/link";
 import { SideBarItem } from "@/common/types/side-nav-type";
 
