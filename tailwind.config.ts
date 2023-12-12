@@ -27,10 +27,7 @@ module.exports = {
   },
     extend: {
       fontFamily: {
-        'sans': "['ui-sans-serif', 'system-ui', 'Airbnb Cereal App',...]",
-        'serif': "['ui-serif', 'Georgia', ...]",
-        
-        primary: "#3881F6",
+        primary: ['Inter'],
       },
       fontSize: {
         xxs: '0.625rem',
@@ -49,7 +46,7 @@ module.exports = {
           600: '#1F3C66',
           700: '#1F3C66',
           800: '#1F3C66',
-          900: '#1F3C66',
+          900: '#FFFAF9',
         },
         neutral: {
           50: '#FAFAFA',
