@@ -13,6 +13,38 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     setExpanded(!isExpanded);
   };
 
+  const services = [
+    {
+      text: "Schedule transactions",
+      icon: "/assets/images/fund_service_schedule.svg",
+    },
+    {
+      text: "Favorite transactions",
+      icon: "/assets/images/fund_service_favourite.svg",
+    },
+    {
+      text: "Manage templates",
+      icon: "/assets/images/fund_service_manage.svg",
+    },
+    {
+      text: "Initiate from templates",
+      icon: "/assets/images/fund_service_initiate.svg",
+    },
+    {
+      text: "View upcoming transactions",
+      icon: "/assets/images/fund_service_upcoming.svg",
+    },
+    {
+      text: "To virtual accounts",
+      icon: "/assets/images/fund_service_virtual.svg",
+    },
+    {
+      text: "Institutional fee",
+      icon: "/assets/images/fund_service_institutional.svg",
+    },
+    { text: "MMID transfer", icon: "/assets/images/fund_service_mmid.svg" },
+  ];
+
   return (
     <div>
       <DashboardHeader />
@@ -91,28 +123,44 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               >
                 {isExpanded ? (
                   <>
-                    <span className="ml-2 text-secondary-300 text-xl font-bold ">View Less</span>
-                    <ChevronUp size={30} color="#1F3C66"/>
+                    <span className="ml-2 text-secondary-300 text-xl font-bold ">
+                      View Less
+                    </span>
+                    <ChevronUp size={30} color="#1F3C66" />
                   </>
                 ) : (
                   <>
-                    <span className="ml-2 text-secondary-300 text-xl font-bold">View More</span>
-                    <ChevronDown size={30} color="#1F3C66"/>
+                    <span className="ml-2 text-secondary-300 text-xl font-bold">
+                      View More
+                    </span>
+                    <ChevronDown size={30} color="#1F3C66" />
                   </>
                 )}
               </button>
             </div>
             <div
               className={`border border-neutral-900 p-4 mt-6 rounded ${
-                isExpanded ? "h-80" : "h-40"
-              } w-full`}
-            ></div>
+                isExpanded ? "h-70" : "h-35"
+              } w-full flex flex-wrap overflow-hidden`}
+            >
+              {services
+                .slice(0, isExpanded ? services.length : 6)
+                .map((item, index) => (
+                  <div key={index} className="w-1/6 flex flex-col items-center mb-5 mt-5">
+                    <Image
+                    src={item.icon}
+                    height={40}
+                    alt="fund_beneficary"
+                    width={40}
+                  />
+                    <p className="text-secondary-300 font-semibold text-lg ml-2 text-center">{item.text}</p>
+                  </div>
+                ))}
+            </div>
             {children}
           </div>
           <div className="h-3/7 flex mt-14">
-            <h2 className="text-black text-xl font-bold">
-              Recent Transaction
-            </h2>
+            <h2 className="text-black text-xl font-bold">Recent Transaction</h2>
             {children}
           </div>
         </div>
