@@ -60,6 +60,9 @@ module.exports = {
           800: '#4D4D4D',
           900: '#EDEDED'
         },
+        textColor: {
+          'rgba-60': 'rgba(0, 0, 0, 0.60)',
+        },
         info: '#EBFFE7',
       },
     },

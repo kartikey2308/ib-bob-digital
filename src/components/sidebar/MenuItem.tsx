@@ -15,7 +15,7 @@ export const MenuItem = ({
         <div className="flex py-4 px-3 items-center w-full h-full">
           <div style={{ width: "2.5rem" }}>{item.icon}</div>
           {!toggleCollapse && (
-            <span className="text-md  text-text-light font-[Airbnb Cereal App]">
+            <span className="text-xl font-semibold">
               {item.title}
             </span>
           )}

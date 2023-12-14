@@ -1,10 +1,10 @@
 "use client";
-import { Card } from "@idb-dab/ui-core";
 import DashboardHeader from "../../components/header/DashboardHeader";
 import SideBar from "../../components/sidebar/SideBar";
 import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronUp, ChevronDown } from "react-feather";
+import Card from "@idb-dab/ui-core/dist/components/Card/Card";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isExpanded, setExpanded] = useState<boolean>(false);
@@ -50,65 +50,62 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <DashboardHeader />
       <div className="h-screen flex flex-row justify-start">
         <SideBar />
-        <div className="bg-white min-h-screen h-1/7 flex-1 flex-col p-4 text-white border-1 border-dashed w-5/12 mt-6 mr-80">
+        <div className="bg-white min-h-screen h-1/7 flex-1 flex-col px-2 py-4 text-white border-1 border-dashed w-5/12 mt-6 mr-80">
           <div className="flex flex-row">
-            <Card className="flex-1 bg-secondary-900 border-2 h-40 w-75">
-              <div className="grid grid-cols-6">
-                <div className="col-span-2 flex items-center justify-center">
-                  <Image
+            <Card className="flex-1 bg-secondary-900 h-40 w-75">
+              <div className="grid grid-cols-4">
+                <div className="col-span-1 flex justify-center mt-5">
+                  <Card.Icon
                     src="/assets/images/fund_beneficary.svg"
-                    height={35}
                     alt="fund_beneficary"
-                    width={35}
+                    className="h-9 w-9 mt-4"
                   />
                 </div>
-                <div className="col-span-4">
-                  <div className="flex text-black font-bold items-center text-right text-xl mt-10">
+                <div className="col-span-3">
+                  <Card.Header className="px-0 flex text-black font-bold items-center text-left text-xl mt-7">
                     Transfer to beneficary
-                  </div>
-                  <div className="text-black flex items-center text-left text-lg">
+                  </Card.Header>
+                  <Card.Body className="px-0 pr-8 text-black flex items-center text-left text-lg">
                     Transfer money to your added beneficiaries
-                  </div>
+                  </Card.Body>
                 </div>
               </div>
             </Card>
-            <Card className="flex-1 bg-secondary-900 border-2 h-40 w-75 ml-5">
-              <div className="grid grid-cols-6">
-                <div className="col-span-2 flex items-center justify-center">
-                  <Image
+            <Card className="flex-1 bg-secondary-900 h-40 w-75 ml-4">
+              <div className="grid grid-cols-4">
+                <div className="col-span-1 flex justify-center mt-5">
+                  <Card.Icon
                     src="/assets/images/fund_quick_transfer.svg"
-                    height={35}
-                    alt="fund_beneficary"
-                    width={35}
+                    alt="fund_quick_transfer"
+                    className="h-12 w-12 mt-2 ml-2 mb-0"
                   />
                 </div>
-                <div className="col-span-4">
-                  <div className="flex text-black font-bold items-center text-right text-xl mt-10">
+                <div className="col-span-3">
+                  <Card.Header className="px-0 flex text-black font-bold items-center text-left text-xl mt-7">
                     Quick transfer
-                  </div>
-                  <div className="text-black flex items-center text-left text-lg">
+                  </Card.Header>
+                  <Card.Body className="px-0 pr-8 text-black flex items-center text-left text-lg">
                     Send money to any account, without adding beneficiary
-                  </div>
+                  </Card.Body>
                 </div>
               </div>
             </Card>
-            <Card className="flex-1 bg-secondary-900 border-2 h-40 w-75 ml-5">
-              <div className="grid grid-cols-6">
-                <div className="col-span-2 flex items-center justify-center">
-                  <Image
+            <Card className="flex-1 bg-secondary-900 h-40 w-75 ml-4">
+              <div className="grid grid-cols-4">
+                <div className="col-span-1 flex justify-center mt-5">
+                  <Card.Icon
                     src="/assets/images/fund_bob_account.svg"
-                    height={35}
-                    alt="fund_beneficary"
-                    width={35}
+                    alt="fund_bob_account"
+                    className="h-10 w-10 mt-4"
                   />
                 </div>
-                <div className="col-span-4">
-                  <div className="flex text-black font-bold items-center text-right text-xl mt-10">
+                <div className="col-span-3">
+                  <Card.Header className="px-0 flex text-black font-bold items-center text-left text-xl mt-7">
                     My bob accounts
-                  </div>
-                  <div className="text-black flex items-center text-left text-lg">
+                  </Card.Header>
+                  <Card.Body className="px-0 pr-12 text-black flex items-center text-left text-lg">
                     Transfer money to your own bob accounts
-                  </div>
+                  </Card.Body>
                 </div>
               </div>
             </Card>
@@ -124,14 +121,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {isExpanded ? (
                   <>
                     <span className="ml-2 text-secondary-300 text-xl font-bold ">
-                      View Less
+                      View less
                     </span>
                     <ChevronUp size={30} color="#1F3C66" />
                   </>
                 ) : (
                   <>
                     <span className="ml-2 text-secondary-300 text-xl font-bold">
-                      View More
+                      View more
                     </span>
                     <ChevronDown size={30} color="#1F3C66" />
                   </>
@@ -146,14 +143,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {services
                 .slice(0, isExpanded ? services.length : 6)
                 .map((item, index) => (
-                  <div key={index} className="w-1/6 flex flex-col items-center mb-5 mt-5">
+                  <div
+                    key={index}
+                    className="w-1/6 flex flex-col items-center mb-5 mt-5"
+                  >
                     <Image
-                    src={item.icon}
-                    height={40}
-                    alt="fund_beneficary"
-                    width={40}
-                  />
-                    <p className="text-secondary-300 font-semibold text-lg ml-2 text-center">{item.text}</p>
+                      src={item.icon}
+                      height={40}
+                      alt="fund_beneficary"
+                      width={40}
+                    />
+                    <p className="text-secondary-300 font-semibold text-lg ml-2 text-center">
+                      {item.text}
+                    </p>
                   </div>
                 ))}
             </div>

@@ -17,7 +17,7 @@ export default function SideBar() {
   const wrapperClasses = classNames(
     "h-screen px-4 pt-8 pb-4 bg-light flex justify-between flex-col",
     {
-      ["w-60"]: !toggleCollapse,
+      ["w-80"]: !toggleCollapse,
       ["w-20"]: toggleCollapse,
     }
   );
@@ -50,7 +50,7 @@ export default function SideBar() {
               </button>
             )}
             <span
-              className={classNames(" text font-medium text-orange ml-12 ", {
+              className={classNames(" text-xl font-medium text-orange ml-12 ", {
                 hidden: toggleCollapse,
               })}
             >
@@ -59,7 +59,7 @@ export default function SideBar() {
           </div>
         </div>
 
-        <div className="flex flex-col items-start mt-7">
+        <div className="flex flex-col items-start mt-4">
           {SIDEBAR_ITEMS.map((item:SideBarItem, index: number) => {
             return (
               <MenuItem key={index} item={item} toggleCollapse={toggleCollapse} />
