@@ -50,7 +50,7 @@ export default function SideBar() {
               </button>
             )}
             <span
-              className={classNames(" text-xl font-medium text-orange ml-12 ", {
+              className={classNames(" text-xl font-medium text-textColor-rgba-60 ml-12 ", {
                 hidden: toggleCollapse,
               })}
             >
@@ -59,10 +59,10 @@ export default function SideBar() {
           </div>
         </div>
 
-        <div className="flex flex-col items-start mt-4">
+        <div className="flex flex-col items-start mt-4 text-textColor-rgba-60">
           {SIDEBAR_ITEMS.map((item:SideBarItem, index: number) => {
             return (
-              <MenuItem key={index} item={item} toggleCollapse={toggleCollapse} />
+              <MenuItem key={index} item={item} toggleCollapse={toggleCollapse}/>
             );
           })}
         </div>

@@ -3,7 +3,7 @@ import DashboardHeader from "../../components/header/DashboardHeader";
 import SideBar from "../../components/sidebar/SideBar";
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronUp, ChevronDown } from "react-feather";
+import { ChevronUp, ChevronDown, ChevronRight } from "react-feather";
 import Card from "@idb-dab/ui-core/dist/components/Card/Card";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -27,7 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       icon: "/assets/images/fund_service_manage.svg",
     },
     {
-      text: "Initiate from templates",
+      text: `Initiate from templates`,
       icon: "/assets/images/fund_service_initiate.svg",
     },
     {
@@ -58,14 +58,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Card.Icon
                     src="/assets/images/fund_beneficary.svg"
                     alt="fund_beneficary"
-                    className="h-9 w-9 mt-4"
                   />
                 </div>
                 <div className="col-span-3">
                   <Card.Header className="px-0 flex text-black font-bold items-center text-left text-xl mt-7">
                     Transfer to beneficary
                   </Card.Header>
-                  <Card.Body className="px-0 pr-8 text-black flex items-center text-left text-lg">
+                  <Card.Body className="px-0 pr-8 text-secondary-400 flex items-center text-left text-lg">
                     Transfer money to your added beneficiaries
                   </Card.Body>
                 </div>
@@ -84,7 +83,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Card.Header className="px-0 flex text-black font-bold items-center text-left text-xl mt-7">
                     Quick transfer
                   </Card.Header>
-                  <Card.Body className="px-0 pr-8 text-black flex items-center text-left text-lg">
+                  <Card.Body className="px-0 pr-5 text-secondary-400 flex items-center text-left text-lg">
                     Send money to any account, without adding beneficiary
                   </Card.Body>
                 </div>
@@ -103,7 +102,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Card.Header className="px-0 flex text-black font-bold items-center text-left text-xl mt-7">
                     My bob accounts
                   </Card.Header>
-                  <Card.Body className="px-0 pr-12 text-black flex items-center text-left text-lg">
+                  <Card.Body className="px-0 pr-12 text-secondary-400 flex items-center text-left text-lg">
                     Transfer money to your own bob accounts
                   </Card.Body>
                 </div>
@@ -113,7 +112,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <div className="h-3/7 flex flex-col mt-12">
             <div className="flex flex-row justify-between items-center">
-              <h2 className="text-black text-xl font-bold">Services</h2>
+              <h2 className="text-black text-2xl font-bold">Services</h2>
               <button
                 className="flex items-center text-color- rounded-md"
                 onClick={handleToggle}
@@ -153,7 +152,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       alt="fund_beneficary"
                       width={40}
                     />
-                    <p className="text-secondary-300 font-semibold text-lg ml-2 text-center">
+                    <p className="text-secondary-300 font-semibold text-xl text-center mt-3 px-3">
                       {item.text}
                     </p>
                   </div>
@@ -162,7 +161,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {children}
           </div>
           <div className="h-3/7 flex mt-14">
-            <h2 className="text-black text-xl font-bold">Recent Transaction</h2>
+            <div className="flex flex-row justify-between items-center">
+              <h2 className="text-black text-2xl font-bold">
+                Recent Transaction
+              </h2>
+              <button className="flex items-center text-color- rounded-md">
+                <span className="ml-2 text-secondary-300 text-xl font-bold ">
+                  View all
+                </span>
+                <ChevronRight size={30} color="#1F3C66" />
+              </button>
+            </div>
             {children}
           </div>
         </div>

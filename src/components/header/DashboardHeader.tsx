@@ -16,7 +16,7 @@ export default function DashboardHeader() {
         </div>
 
         {/* Middle Section: Search Button */}
-        <div className=" flex items-center w-1/3 border-2 border-neutral-900 rounded-lg p-1 mb-2 mr-96">
+        <div className=" flex items-center w-1/3 border-2 border-neutral-900 rounded-md p-1 mb-2 mr-96">
           {/* Search Icon */}
           <div className="mr-1">
             <Image

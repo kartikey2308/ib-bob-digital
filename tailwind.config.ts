@@ -27,7 +27,7 @@ module.exports = {
   },
     extend: {
       fontFamily: {
-        primary: ['Inter'],
+        primary: ['AirbnbCerealApp'],
       },
       fontSize: {
         xxs: '0.625rem',
@@ -41,7 +41,7 @@ module.exports = {
           100: '#1F3C664D',
           200: '#F3F9FD',
           300: '#1F3C66',
-          400: '#1F3C66',
+          400: '#2F2F2F',
           500: '#1F3C66',
           600: '#1F3C66',
           700: '#1F3C66',
