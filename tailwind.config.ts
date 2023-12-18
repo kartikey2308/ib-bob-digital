@@ -10,6 +10,9 @@ module.exports = {
   important:true,
   theme: {
     ...defaultTheme,
+    fontSize: {
+      sm: ['16px']
+    },
   colors:{
     ...defaultTheme.colors,
     primary:"#3881F6",

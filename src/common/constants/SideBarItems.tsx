@@ -1,38 +1,27 @@
 
 import { SideBarItem } from '../types/side-nav-type';
-import InvestIcon from '@/components/icons/InvestIcon';
-import ShopIcon from '@/components/icons/ShopIcon';
-import SaveIcon from '@/components/icons/SaveIcon';
-import BorrowIcon from '@/components/icons/BorrowIcon';
-import Image from 'next/image';
-import FundTransferIcon from '@/components/icons/FundTransferIcon';
 
 export const SIDEBAR_ITEMS: SideBarItem[] = [
   {
     title: 'Save',
     path: '/',
-    icon:  <SaveIcon/>
+    icon:  "/assets/images/save.svg"
   },
   {
     title: 'Invest',
     path: '/invest',
-    icon: <InvestIcon />
+    icon: "/assets/images/invest.svg"
    
   },
   {
     title: 'Borrow',
     path: '/borrow',
-    icon: <BorrowIcon />
+    icon: "/assets/images/borrow.svg"
   },
   {
     title: 'Shop',
     path: '/shop',
-    icon: <ShopIcon/>
+    icon: "/assets/images/shop.svg"
    
-  },
-  {
-    title: 'Transfer',
-    path: '/fundTransfer',
-    icon: <FundTransferIcon/>
   }
 ];

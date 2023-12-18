@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import classNames from "classnames";
-import CollapseIcon from "../icons/CollapseIcon";
+import Image from "next/image";
 import { SIDEBAR_ITEMS } from "@/common/constants/SideBarItems";
 import { MenuItem } from "./MenuItem";
 import { SideBarItem } from "@/common/types/side-nav-type";
@@ -46,7 +46,7 @@ export default function SideBar() {
                 className={collapseIconClasses}
                 onClick={handleSidebarToggle}
               >
-                <CollapseIcon />
+                <Image src="/assets/images/accountsIcon.svg" height={20} width={20} alt=""/>
               </button>
             )}
             <span

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ChevronUp, ChevronDown, ChevronRight } from "react-feather";
 import Card from "@idb-dab/ui-core/dist/components/Card/Card";
 import Table from "@idb-dab/ui-core/dist/components/Table/Table";
+import BeneficiaryList from "@/components/List/BeneficiaryList";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isExpanded, setExpanded] = useState<boolean>(false);
@@ -68,9 +69,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <DashboardHeader />
-      <div className="h-screen flex flex-row justify-start">
-        <SideBar />
-        <div className="bg-white min-h-screen h-1/7 flex-1 flex-col px-2 py-4 text-white border-1 border-dashed w-5/12 mt-6 mr-80">
+      <div className="h-screen w-screen flex flex-row justify-start">
+        <div >
+        <SideBar/>
+        </div>
+        <div className="bg-white min-h-screen w-4/5 h-1/7 flex-1 flex-col px-2 py-4 text-white border-1 border-dashed w-5/12 mt-6 ">
           <div className="flex flex-row">
             <Card className="flex-1 bg-secondary-900 h-40 w-75">
               <div className="grid grid-cols-4">
@@ -195,7 +198,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Table className="text-black border-2 border-neutral-900 mt-6 px-3">
               <Table.Tbody>
                 {recentTransaction.map((transaction, index) => (
-                  <Table.Tr key={index}>
+                  <Table.Tr key={index} className="border-neutral-900">
                     <Table.Td className="flex flex-row my-4">
                       <div className="mr-4">
                         {transaction.paymentType === "credit" && (
@@ -255,6 +258,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Table>
             {children}
           </div>
+        </div>
+        <div className="text-black w-1/5">
+         <BeneficiaryList/>
         </div>
       </div>
     </div>
