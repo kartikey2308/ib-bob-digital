@@ -4,7 +4,7 @@ export default function DashboardHeader() {
 
   return (
     <div className="">
-      <header className="bg-white pt-2 flex justify-between items-center relative text-white">
+      <header className="bg-white pt-2 flex items-center justify-between">
         {/* Left Section: Icon */}
         <div className="flex items-center ml-12 mb-2">
           <Image
@@ -16,7 +16,7 @@ export default function DashboardHeader() {
         </div>
 
         {/* Middle Section: Search Button */}
-        <div className=" flex items-center text-center w-1/3 mr-80">
+        <div className=" flex items-center w-1/3 border-2 border-neutral-900 rounded-md p-1 mb-2 mr-96">
           {/* Search Icon */}
           <div className="mr-1">
             <Image
@@ -28,12 +28,12 @@ export default function DashboardHeader() {
           </div>
           <input
             id='searchInput'
-            type="text"
+            type="searchBox"
             placeholder="Search"
-            className="p-2 w-4/5 h-8 bg-white-700 text-black rounded-md border-none focus:border-none"
+            className="p-2 w-4/5 h-8 bg-white-700 text-black outline-none rounded-md border-none"
           />
           {/* Mic Icon */}
-          <div className="ml-1">
+          <div className="ml-10">
             <Image src="/assets/images/mic-icon.svg" alt="Mic Icon" width={18} height={18} />
           </div>
         </div>
@@ -41,52 +41,52 @@ export default function DashboardHeader() {
         {/* Right Section: Button Icons */}
         <div className="flex items-center">
           {/* Example of 4 button icons */}
-          <button className="mx-2">
+          <button className="mx-3">
             <Image
               src="/assets/images/header-right-1.svg"
-              alt="Icon 1"
+              alt="add"
               width={18}
               height={18}
             />
           </button>
-          <button className="mx-2">
+          <button className="mx-3">
             <Image
               src="/assets/images/header-right-2.svg"
-              alt="Icon 2"
+              alt="notification"
               width={18}
               height={18}
             />
           </button>
-          <button className="mx-2">
+          <button className="mx-3">
             <Image
               src="/assets/images/header-right-3.svg"
-              alt="Icon 3"
+              alt="info"
               width={18}
               height={18}
             />
           </button>
-          <button className="mx-2">
+          <button className="mx-3">
             <Image
-              src="/assets/images/header-right-4.svg"
-              alt="Icon 4"
+              src="/assets/images/header-right-4.png"
+              alt="issues"
               width={15}
-              height={10}
+              height={21}
             />
           </button>
-          <button className="mx-2">
+          <button className="ml-3 mb-1">
             <Image
               src="/assets/images/header-profile-icon.svg"
-              alt="Icon 4"
+              alt="profile"
               width={40}
               height={40}
             />
           </button>
-          <button className="mx-2">
-            <Image src="/assets/images/arrow-down.svg" alt="Icon 4" width={10} height={10} />
+          <button className="ml-1 mr-10">
+            <Image src="/assets/images/arrow-down.svg" alt="more" width={10} height={10} />
           </button>
         </div>
       </header>
-      <hr className="border-t-1 border-{#EDEDED} mb-1" />
+      <hr className={`border-t-2 border-neutral-900`} />
     </div>
   );
 }

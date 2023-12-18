@@ -27,10 +27,7 @@ module.exports = {
   },
     extend: {
       fontFamily: {
-        'sans': "['ui-sans-serif', 'system-ui', 'Airbnb Cereal App',...]",
-        'serif': "['ui-serif', 'Georgia', ...]",
-        
-        primary: "#3881F6",
+        primary: ['AirbnbCerealApp'],
       },
       fontSize: {
         xxs: '0.625rem',
@@ -44,12 +41,13 @@ module.exports = {
           100: '#1F3C664D',
           200: '#F3F9FD',
           300: '#1F3C66',
-          400: '#1F3C66',
-          500: '#1F3C66',
-          600: '#1F3C66',
-          700: '#1F3C66',
-          800: '#1F3C66',
-          900: '#1F3C66',
+          400: '#2F2F2F',
+          500: '#929EAE',
+          600: '#3AB31C',
+          700: '#FB1111',
+          800: '#F4F4F4',
+          900: '#FFFAF9',
+          1000: '#FFE27A'
         },
         neutral: {
           50: '#FAFAFA',
@@ -61,6 +59,10 @@ module.exports = {
           600: '#777777',
           700: '#585858',
           800: '#4D4D4D',
+          900: '#EDEDED'
+        },
+        textColor: {
+          'rgba-60': 'rgba(0, 0, 0, 0.60)',
         },
         info: '#EBFFE7',
       },

@@ -1,3 +1,4 @@
+"use client"
 import DashboardHeader from "../../components/header/DashboardHeader"
 import SideBar from "../../components/sidebar/SideBar"
 import React from 'react';

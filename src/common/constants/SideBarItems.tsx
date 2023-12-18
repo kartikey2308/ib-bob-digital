@@ -5,6 +5,7 @@ import ShopIcon from '@/components/icons/ShopIcon';
 import SaveIcon from '@/components/icons/SaveIcon';
 import BorrowIcon from '@/components/icons/BorrowIcon';
 import Image from 'next/image';
+import FundTransferIcon from '@/components/icons/FundTransferIcon';
 
 export const SIDEBAR_ITEMS: SideBarItem[] = [
   {
@@ -28,5 +29,10 @@ export const SIDEBAR_ITEMS: SideBarItem[] = [
     path: '/shop',
     icon: <ShopIcon/>
    
+  },
+  {
+    title: 'Transfer',
+    path: '/fundTransfer',
+    icon: <FundTransferIcon/>
   }
 ];

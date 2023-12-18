@@ -27,6 +27,7 @@
     "next": "^14.0.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-feather": "^2.0.10",
     "tailwind-scrollbar": "^3.0.5",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2"
