@@ -86,7 +86,7 @@ export default function DashboardHeader() {
           </button>
         </div>
       </header>
-      <hr className={`border-t-1 border-neutral-900`} />
+      <hr className={`border-t-2 border-neutral-900`} />
     </div>
   );
 }

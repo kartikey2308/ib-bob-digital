@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronUp, ChevronDown, ChevronRight } from "react-feather";
 import Card from "@idb-dab/ui-core/dist/components/Card/Card";
+import Table from "@idb-dab/ui-core/dist/components/Table/Table";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isExpanded, setExpanded] = useState<boolean>(false);
@@ -43,6 +44,25 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       icon: "/assets/images/fund_service_institutional.svg",
     },
     { text: "MMID transfer", icon: "/assets/images/fund_service_mmid.svg" },
+  ];
+
+  const recentTransaction = [
+    {
+      name: "Prasad Nair",
+      transactionDate: "22 May 2023, 6:30pm",
+      paymentMode: "IMPS",
+      remarks: "Salary",
+      paymentType: "credit",
+      amount: 50000.0,
+    },
+    {
+      name: "Amazon Inc",
+      transactionDate: "22 May 2023, 6:30pm",
+      paymentMode: "UPI",
+      remarks: "Shopping",
+      paymentType: "debt",
+      amount: 10000.0,
+    },
   ];
 
   return (
@@ -135,7 +155,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </button>
             </div>
             <div
-              className={`border border-neutral-900 p-4 mt-6 rounded ${
+              className={`border-2 border-neutral-900 p-4 mt-6 rounded ${
                 isExpanded ? "h-70" : "h-35"
               } w-full flex flex-wrap overflow-hidden`}
             >
@@ -160,7 +180,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
             {children}
           </div>
-          <div className="h-3/7 flex mt-14">
+          <div className="h-3/7 flex flex-col mt-14">
             <div className="flex flex-row justify-between items-center">
               <h2 className="text-black text-2xl font-bold">
                 Recent Transaction
@@ -172,6 +192,67 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <ChevronRight size={30} color="#1F3C66" />
               </button>
             </div>
+            <Table className="text-black border-2 border-neutral-900 mt-6 px-3">
+              <Table.Tbody>
+                {recentTransaction.map((transaction, index) => (
+                  <Table.Tr key={index}>
+                    <Table.Td className="flex flex-row my-4">
+                      <div className="mr-4">
+                        {transaction.paymentType === "credit" && (
+                          <Image
+                            src="/assets/images/recent_transaction_credit.svg"
+                            height={50}
+                            width={50}
+                            alt="credit_fund"
+                          />
+                        )}
+                        {transaction.paymentType === "debt" && (
+                          <Image
+                            src="/assets/images/recent_transaction_debt.svg"
+                            height={50}
+                            width={50}
+                            alt="credit_fund"
+                          />
+                        )}
+                      </div>
+                      <div>
+                        <text className="text-xl font-semibold">
+                          {transaction.name}
+                        </text>
+                        <br />
+                        <div className="text-secondary-500">
+                          {transaction.transactionDate}
+                        </div>
+                      </div>
+                    </Table.Td>
+                    <Table.Td>
+                      <div className="flex flex-row font-normal text-base">
+                        <div className="bg-secondary-800 py-2 px-5 rounded-md mr-2">
+                          {transaction.paymentMode}
+                        </div>
+                        <div className="bg-secondary-1000 py-2 px-5 rounded-md">
+                          {transaction.remarks}
+                        </div>
+                      </div>
+                    </Table.Td>
+                    <Table.Td
+                      className={`text-right ${
+                        transaction.paymentType === "credit"
+                          ? "text-secondary-600"
+                          : "text-secondary-700"
+                      }`}
+                    >
+                      <span className="text-2xl font-bold">
+                        {transaction.paymentType === "credit" && "+"}
+                        {transaction.paymentType === "debt" && "-"}₹
+                        {Math.floor(transaction.amount).toLocaleString("en-US")}
+                      </span>
+                      .{transaction.amount.toFixed(2).split(".")[1]}
+                    </Table.Td>
+                  </Table.Tr>
+                ))}
+              </Table.Tbody>
+            </Table>
             {children}
           </div>
         </div>
