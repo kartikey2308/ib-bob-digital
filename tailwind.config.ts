@@ -1,26 +1,33 @@
-import type { Config } from 'tailwindcss'
+//@type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss';
 
-const config: Config = {
+const defaultTheme = require('tailwindcss/defaultTheme')
+module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,jsx,ts,tsx}',
     './node_modules/@idb-dab/ui-core/dist/**/*.js',
   ],
-  // theme: {
-  //   extend: {
-  //     backgroundImage: {
-  //       'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-  //       'gradient-conic':
-  //         'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-  //     },
-  //   },
-  // },
+  important:true,
   theme: {
+    ...defaultTheme,
+  colors:{
+    ...defaultTheme.colors,
+    primary:"#3881F6",
+    white:"#ffffff",
+    orange:"#FF5C34",
+    black:"#000000",
+    text:{
+      DEFAULT:"#1f2937",
+      light:"6C7281"
+    },
+    light:{
+      DEFAULT:"FAFBFC",
+      lighter:"F3F4F6"
+    }
+  },
     extend: {
       fontFamily: {
-        primary: ['Inter'],
+        primary: ['AirbnbCerealApp'],
       },
       fontSize: {
         xxs: '0.625rem',
@@ -29,24 +36,18 @@ const config: Config = {
         modal: '0px 7px 40px rgba(242, 101, 32, 0.35)',
       },
       colors: {
-        primary: {
-          100: '#FFF8F7',
-          200: '#FFF3F1',
-          300: '#FCECE5',
-          400: '#FFEDE6',
-          500: '#FCDCD58F',
-          900: '#FF5C34',
-        },
+        primary: "#3881F6",
         secondary: {
           100: '#1F3C664D',
           200: '#F3F9FD',
           300: '#1F3C66',
-          400: '#1F3C66',
-          500: '#1F3C66',
-          600: '#1F3C66',
-          700: '#1F3C66',
-          800: '#1F3C66',
-          900: '#1F3C66',
+          400: '#2F2F2F',
+          500: '#929EAE',
+          600: '#3AB31C',
+          700: '#FB1111',
+          800: '#F4F4F4',
+          900: '#FFFAF9',
+          1000: '#FFE27A'
         },
         neutral: {
           50: '#FAFAFA',
@@ -58,11 +59,18 @@ const config: Config = {
           600: '#777777',
           700: '#585858',
           800: '#4D4D4D',
+          900: '#EDEDED'
+        },
+        textColor: {
+          'rgba-60': 'rgba(0, 0, 0, 0.60)',
         },
         info: '#EBFFE7',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('tailwind-scrollbar'),
+  ],
 }
-export default config
