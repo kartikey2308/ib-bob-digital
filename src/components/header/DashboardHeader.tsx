@@ -30,7 +30,7 @@ export default function DashboardHeader() {
             id='searchInput'
             type="searchBox"
             placeholder="Search"
-            className="p-2 w-4/5 h-8 bg-white-700 text-black outline-none rounded-md border-none"
+            className="p-2 w-4/5 h-10 placeholder:text-secondary-1100 placeholder:text-xl bg-white-700 text-black outline-none rounded-md border-none"
           />
           {/* Mic Icon */}
           <div className="ml-10">

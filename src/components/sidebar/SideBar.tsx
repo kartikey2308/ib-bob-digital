@@ -15,18 +15,15 @@ export default function SideBar() {
 
 
   const wrapperClasses = classNames(
-    "h-screen px-4 pt-8 pb-4 bg-light flex justify-between flex-col",
+    "h-screen pb-4 bg-light flex justify-between flex-col",
     {
-      ["w-80"]: !toggleCollapse,
-      ["w-20"]: toggleCollapse,
+      ["w-80 px-10 pt-8"]: !toggleCollapse,
+      ["w-20 pl-4 mt-11"]: toggleCollapse,
     }
   );
 
   const collapseIconClasses = classNames(
     "p-4 rounded bg-light-lighter absolute right-190",
-    {
-      "rotate-180": toggleCollapse,
-    }
   );
 
   const handleSidebarToggle = () => {
@@ -46,11 +43,11 @@ export default function SideBar() {
                 className={collapseIconClasses}
                 onClick={handleSidebarToggle}
               >
-                <Image src="/assets/images/accountsIcon.svg" height={20} width={20} alt=""/>
+                <Image src="/assets/images/accountsIcon.svg" height={30} width={30} alt=""/>
               </button>
             )}
             <span
-              className={classNames(" text-xl font-medium text-textColor-rgba-60 ml-12 ", {
+              className={classNames(" text-xl font-medium text-textColor-rgba-60 ml-16 ", {
                 hidden: toggleCollapse,
               })}
             >
