@@ -17,13 +17,13 @@ export default function SideBar() {
   const wrapperClasses = classNames(
     "h-screen pb-4 bg-light flex justify-between flex-col",
     {
-      ["w-80 px-10 pt-8"]: !toggleCollapse,
-      ["w-20 pl-4 mt-11"]: toggleCollapse,
+      ["w-60 px-10 pt-10"]: !toggleCollapse,
+      ["w-20 pl-4 pt-12"]: toggleCollapse,
     }
   );
 
   const collapseIconClasses = classNames(
-    "p-4 rounded bg-light-lighter absolute right-190",
+    "rounded bg-light-lighter absolute right-190",
   );
 
   const handleSidebarToggle = () => {
@@ -37,17 +37,17 @@ export default function SideBar() {
     >
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative">
-          <div className="flex items-center pl-l ga-p-4">
+          <div className="flex items-center">
             {isCollapsible && (
               <button
                 className={collapseIconClasses}
                 onClick={handleSidebarToggle}
               >
-                <Image src="/assets/images/accountsIcon.svg" height={30} width={30} alt=""/>
+                <Image src="/assets/images/accountsIcon.svg" height={22} width={22} alt=""/>
               </button>
             )}
             <span
-              className={classNames(" text-xl font-medium text-textColor-rgba-60 ml-16 ", {
+              className={classNames(" text-base font-medium text-textColor-rgba-60 ml-10 ", {
                 hidden: toggleCollapse,
               })}
             >

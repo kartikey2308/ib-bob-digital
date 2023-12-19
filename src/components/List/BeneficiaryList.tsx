@@ -7,34 +7,34 @@ import { ChevronRight } from "react-feather";
 
 const BeneficiaryList: React.FC = () => {
   return (
-    <div className="p-8 mr-6">
+    <div className="p-8 mr-2">
       <div className="flex flex-row justify-between items-center">
-        <h1 className="text-black font-bold text-2xl mt-2">Beneficiary</h1>
+        <h1 className="text-black font-bold text-base">Beneficiary</h1>
         <button className="flex items-center">
-          <span className="mt-2 text-secondary-300 text-xl font-bold ">
+          <span className="text-secondary-300 text-sm font-bold ">
             Manage
           </span>
-          <ChevronRight size={30} color="#1F3C66" className="mt-2" />
+          <ChevronRight size={17} color="#1F3C66" className="mt-1" />
         </button>
       </div>
-      <Table className="text-black border-2 rounded-sm border-neutral-900 mt-5">
+      <Table className="text-black border rounded-sm border-neutral-900 mt-4">
         <Table.Tbody>
           {Beneficiaries.map((beneficiary: Beneficiary, index: number) => (
             <Table.Tr key={index} className="border-neutral-900">
-              <Table.Td className="flex flex-row my-3 ml-2">
+              <Table.Td className="flex flex-row my-1 ml-2">
                 <Image
                   src={beneficiary.icon}
-                  height={45}
-                  width={45}
+                  height={32}
+                  width={32}
                   alt="bank_icon"
                   className="mr-3"
                 />
                 <div>
-                  <text className="text-base font-semibold">
+                  <text className="text-xs font-semibold">
                     {beneficiary.name}
                   </text>
                   <br />
-                  <div className="text-secondary-500 text-xs">
+                  <div className="text-secondary-500 text-[10px] -mt-1">
                     {beneficiary.accountNumber}
                   </div>
                 </div>
@@ -43,16 +43,16 @@ const BeneficiaryList: React.FC = () => {
                 {beneficiary.favourite === true && (
                   <Image
                     src="/assets/images/favourite_icon.svg"
-                    height={25}
-                    width={25}
+                    height={20}
+                    width={20}
                     alt="favourite_beneficiary"
                   />
                 )}
                 {beneficiary.favourite === false && (
                   <Image
                     src="/assets/images/unfavourite_icon.svg"
-                    height={25}
-                    width={25}
+                    height={20}
+                    width={20}
                     alt="unfavourite_beneficiary"
                   />
                 )}

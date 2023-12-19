@@ -18,12 +18,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div>
           <SideBar />
         </div>
-        <div className="bg-white min-h-screen w-3/4 h-1/7 flex-1 flex-col px-2 py-4 text-white border-1 border-dashed w-5/12 mt-6 ">
+        <div className="bg-white min-h-screen w-3/4 h-1/7 flex-1 flex-col py-4 text-white border-1 border-dashed w-5/12 mt-6 ">
           <BobCards />
-          <div className="h-3/7 flex flex-col mt-12">
+          <div className="h-3/7 flex flex-col mt-10">
             <ServicesCollapsableDiv />
           </div>
-          <div className="h-3/7 flex flex-col mt-14">
+          <div className="h-3/7 flex flex-col mt-10">
             <RecentTransactionTable />
           </div>
         </div>
