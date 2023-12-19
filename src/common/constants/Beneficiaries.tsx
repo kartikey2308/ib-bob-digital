@@ -2,10 +2,14 @@ import { Beneficiary } from "../types/beneficiary-type";
 export const Beneficiaries: Beneficiary[]= [
     {
       name: "Prasad Nair",
-      accountNumber: 7575443890
+      accountNumber: '1234 55 5677 5590',
+      icon: '/assets/images/sbi_icon.svg',
+      favourite: true
     },
     {
-      name: "Amazon Inc",
-      accountNumber: 6456754679
+      name: "Aniket Sharma",
+      accountNumber: '1234 55 5677 3456',
+      icon: '/assets/images/baroda_icon.svg',
+      favourite: false
     },
   ];

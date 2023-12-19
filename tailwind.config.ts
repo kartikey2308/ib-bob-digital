@@ -7,27 +7,24 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
     './node_modules/@idb-dab/ui-core/dist/**/*.js',
   ],
-  important:true,
+  important: true,
   theme: {
     ...defaultTheme,
-    fontSize: {
-      sm: ['16px']
+    colors: {
+      ...defaultTheme.colors,
+      primary: "#3881F6",
+      white: "#ffffff",
+      orange: "#FF5C34",
+      black: "#000000",
+      text: {
+        DEFAULT: "#1f2937",
+        light: "6C7281"
+      },
+      light: {
+        DEFAULT: "FAFBFC",
+        lighter: "F3F4F6"
+      }
     },
-  colors:{
-    ...defaultTheme.colors,
-    primary:"#3881F6",
-    white:"#ffffff",
-    orange:"#FF5C34",
-    black:"#000000",
-    text:{
-      DEFAULT:"#1f2937",
-      light:"6C7281"
-    },
-    light:{
-      DEFAULT:"FAFBFC",
-      lighter:"F3F4F6"
-    }
-  },
     extend: {
       fontFamily: {
         primary: ['AirbnbCerealApp'],
@@ -50,7 +47,8 @@ module.exports = {
           700: '#FB1111',
           800: '#F4F4F4',
           900: '#FFFAF9',
-          1000: '#FFE27A'
+          1000: '#FFE27A',
+          1100: '#929EAE'
         },
         neutral: {
           50: '#FAFAFA',

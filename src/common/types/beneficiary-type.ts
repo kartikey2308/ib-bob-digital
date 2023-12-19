@@ -1,4 +1,6 @@
 export type Beneficiary = {
-    accountNumber:number;
-    name:string;
+    accountNumber: string;
+    name: string;
+    icon: string;
+    favourite: boolean;
 }

@@ -13,10 +13,10 @@ export const MenuItem = ({
   return (
     <div className="flex items-center cursor-pointer hover:bg-light-lighter rounded w-full overflow-hidden whitespace-nowrap">
       <Link href={item.path}>
-        <div className="flex py-4 px-3 items-center w-full h-full">
-          <Image src={item.icon} height={20} width={20} alt=""/>
+        <div className="flex py-3 items-center w-full h-full">
+          <Image src={item.icon} height={22} width={22} alt=""/>
           {!toggleCollapse && (
-            <span className="text-xl font-semibold ml-2">
+            <span className="text-base font-semibold ml-4">
               {item.title}
             </span>
           )}
