@@ -1,9 +1,9 @@
-"use client";
+
 import DashboardHeader from "@/components/header/DashboardHeader";
 import SideBar from "@/components/sidebar/SideBar";
-import BeneficiaryList from "@/components/List/BeneficiaryList";
+import BeneficiaryList from "@/components/table/BeneficiaryList";
 import RecentTransactionTable from "@/components/table/RecentTransactionTable";
-import ServicesCollapsableDiv from "@/components/collapsableDiv/FundTransferServices";
+import ServicesCollapsableDiv from "@/components/collapsable-div/FundTransferServices";
 import BobCards from "@/components/card/BobCards";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

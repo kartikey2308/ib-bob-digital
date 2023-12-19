@@ -1,3 +1,4 @@
+"use client";
 import { Services } from "@/common/constants/Services";
 import { Service } from "@/common/types/service-type";
 import { useState } from "react";

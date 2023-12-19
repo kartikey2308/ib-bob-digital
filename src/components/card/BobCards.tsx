@@ -1,3 +1,4 @@
+"use client";
 import Card from "@idb-dab/ui-core/dist/components/Card/Card";
 
 const BobCards: React.FC = () => {
