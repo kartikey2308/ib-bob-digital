@@ -1,3 +1,4 @@
+"use client";
 import { RecentTransactions } from "@/common/constants/RecentTransaction";
 import { RecentTransaction } from "@/common/types/recentTransaction-type";
 import Table from "@idb-dab/ui-core/dist/components/Table/Table";

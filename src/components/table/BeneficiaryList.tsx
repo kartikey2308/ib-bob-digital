@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Beneficiaries } from "@/common/constants/Beneficiaries";
 import { Beneficiary } from "@/common/types/beneficiary-type";

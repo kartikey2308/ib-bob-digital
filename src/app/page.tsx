@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 
 const Page = () => {
-  redirect(`/fundTransfer`);
+  redirect(`/fund-transfer`);
 };
 
 export default Page;

@@ -67,7 +67,7 @@ export default function DashboardHeader() {
           </button>
           <button className="mx-2">
             <Image
-              src="/assets/images/header-right-4.png"
+              src="/assets/images/header-right-4.svg"
               alt="issues"
               width={11}
               height={16}
