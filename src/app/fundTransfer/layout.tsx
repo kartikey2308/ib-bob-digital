@@ -1,13 +1,9 @@
 "use client";
-import DashboardHeader from "../../components/header/DashboardHeader";
-import SideBar from "../../components/sidebar/SideBar";
-import React, { useState } from "react";
-import Image from "next/image";
-import { ChevronUp, ChevronDown } from "react-feather";
-import Card from "@idb-dab/ui-core/dist/components/Card/Card";
+import DashboardHeader from "@/components/header/DashboardHeader";
+import SideBar from "@/components/sidebar/SideBar";
 import BeneficiaryList from "@/components/List/BeneficiaryList";
 import RecentTransactionTable from "@/components/table/RecentTransactionTable";
-import ServicesCollapsableDiv from "@/components/collapsableDiv/ServicesCollapsableDiv";
+import ServicesCollapsableDiv from "@/components/collapsableDiv/FundTransferServices";
 import BobCards from "@/components/card/BobCards";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
