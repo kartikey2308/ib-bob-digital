@@ -2,17 +2,16 @@
 import React from "react";
 import classNames from "classnames";
 import Image from "next/image";
-import { SIDEBAR_ITEMS } from "@/common/constants/SideBarItems";
+import {
+  SIDEBAR_ITEMS,
+  SIDEBAR_SERVICES,
+} from "@/common/constants/SideBarItems";
 import { MenuItem } from "./MenuItem";
 import { SideBarItem } from "@/common/types/side-nav-type";
-
-
 
 export default function SideBar() {
   const [toggleCollapse, setToggleCollapse] = React.useState<boolean>(true);
   const [isCollapsible, setIsCollapsible] = React.useState<boolean>(true);
-
-
 
   const wrapperClasses = classNames(
     "h-screen pb-4 bg-light flex justify-between flex-col",
@@ -23,7 +22,7 @@ export default function SideBar() {
   );
 
   const collapseIconClasses = classNames(
-    "rounded bg-light-lighter absolute right-190",
+    "rounded bg-light-lighter absolute right-190"
   );
 
   const handleSidebarToggle = () => {
@@ -43,28 +42,64 @@ export default function SideBar() {
                 className={collapseIconClasses}
                 onClick={handleSidebarToggle}
               >
-                <Image src="/assets/images/accountsIcon.svg" height={22} width={22} alt=""/>
+                <Image
+                  src="/assets/images/sidebar-accounts.svg"
+                  height={22}
+                  width={22}
+                  alt=""
+                />
               </button>
             )}
             <span
-              className={classNames(" text-base font-medium text-textColor-rgba-60 ml-10 ", {
-                hidden: toggleCollapse,
-              })}
+              className={classNames(
+                " font-semibold text-sm text-textColor-rgba-60 ml-10 ",
+                {
+                  hidden: toggleCollapse,
+                }
+              )}
             >
               Accounts
             </span>
           </div>
         </div>
 
-        <div className="flex flex-col items-start mt-4 text-textColor-rgba-60">
-          {SIDEBAR_ITEMS.map((item:SideBarItem, index: number) => {
+        <div className="flex flex-col items-start mt-1 text-textColor-rgba-60">
+          {SIDEBAR_ITEMS.map((item: SideBarItem, index: number) => {
             return (
-              <MenuItem key={index} item={item} toggleCollapse={toggleCollapse}/>
+              <MenuItem
+                key={index}
+                item={item}
+                toggleCollapse={toggleCollapse}
+              />
+            );
+          })}
+        </div>
+        <hr
+          className={`${
+            !toggleCollapse ? "mt-5 border-1 border-1 border-neutral-900" : "hidden mt-10"
+          }`}
+        ></hr>
+        <div
+          className={`${
+            !toggleCollapse
+              ? "text-xs mt-6 text-textColor-rgba-60 font-medium"
+              : "hidden"
+          }`}
+        >
+          Services
+        </div>
+        <div className="flex flex-col items-start mt-3 text-textColor-rgba-60">
+          {SIDEBAR_SERVICES.map((item: SideBarItem, index: number) => {
+            return (
+              <MenuItem
+                key={index}
+                item={item}
+                toggleCollapse={toggleCollapse}
+              />
             );
           })}
         </div>
       </div>
-      <div></div>
     </div>
   );
 }
