@@ -4,6 +4,7 @@ import { Service } from "@/common/types/service-type";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "react-feather";
 import Image from "next/image";
+import LabelledIcon from "ui-lib/dist/components/LabelledIcon/LabelledIcon"
 
 const ServicesCollapsableDiv: React.FC = () => {
     const [isExpanded, setExpanded] = useState<boolean>(false);
@@ -48,15 +49,7 @@ const ServicesCollapsableDiv: React.FC = () => {
               key={index}
               className="w-1/6 flex flex-col items-center mt-4 mb-2"
             >
-              <Image
-                src={item.icon}
-                height={28}
-                alt="fund_transfer_services"
-                width={28}
-              />
-              <p className="text-secondary-300 font-medium text-sm text-center mt-3 px-2">
-                {item.text}
-              </p>
+              <LabelledIcon src={item.icon} alt={item.text} height={28} width={28}></LabelledIcon>
             </div>
           ))}
       </div>

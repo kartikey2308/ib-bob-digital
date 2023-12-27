@@ -1,5 +1,5 @@
 "use client";
-import DashboardHeader from "../../components/header/DashboardHeader";
+import DashboardHeader from "../../components/Header/Header";
 import SideBar from "../../components/sidebar/SideBar";
 import React from "react";
 
