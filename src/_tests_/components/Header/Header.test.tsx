@@ -1,9 +1,9 @@
-import DashboardHeader from "../components/header/DashboardHeader"
 import React from 'react';
 import {render} from "@testing-library/react";
-describe("DashboardHeader", () => {
+import Header from "../../../components/Header/Header"
+describe("Header", () => {
   it("renders the header", () => {
-    const header = render( <DashboardHeader/>);
+    const header = render( <Header/>);
     expect(header).toBeDefined();
   });
 });
