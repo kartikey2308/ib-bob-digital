@@ -1,7 +1,7 @@
-import BeneficiaryList from "@/components/table/BeneficiaryList";
-import RecentTransactionTable from "@/components/table/RecentTransactionTable";
-import ServicesCollapsableDiv from "@/components/collapsable-div/FundTransferServices";
-import BobCards from "@/components/card/BobCards";
+import BeneficiaryList from "@/components/Table/BeneficiaryList";
+import RecentTransactionTable from "@/components/Table/RecentTransactionTable";
+import ServicesCollapsableDiv from "@/components/FundTransferServices/FundTransferServices";
+import BobCards from "@/components/BOBCards/BobCards";
 import Layout from "../dashboard/layout";
 
 export default function Page({ children }: { children: React.ReactNode }) {
