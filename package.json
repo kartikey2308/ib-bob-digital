@@ -18,12 +18,13 @@
     }
   },
   "dependencies": {
+    "@idb-dab/lib-api-calls": "^1.0.3",
     "@idb-dab/ui-core": "^0.0.7",
     "@idb-dab/ui-models": "^0.0.1",
     "@idb-dab/ui-utils": "^0.0.1",
-    "ui-lib": "^1.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "classnames": "^2.3.2",
+    "expo-crypto": "^12.6.0",
     "jest-dom": "^4.0.0",
     "next": "^14.0.3",
     "react": "^18.2.0",
@@ -31,7 +32,8 @@
     "react-feather": "^2.0.10",
     "tailwind-scrollbar": "^3.0.5",
     "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "ui-lib": "^1.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",

@@ -2,8 +2,13 @@ import { SideBarItem } from "../types/side-nav-type";
 
 export const SIDEBAR_ITEMS: SideBarItem[] = [
   {
-    title: "Save",
+    title: "Accounts",
     path: "/dashboard",
+    icon: "/assets/images/sidebar-accounts.svg",
+  },
+  {
+    title: "Save",
+    path: "/save",
     icon: "/assets/images/sidebar-save.svg",
   },
   {
